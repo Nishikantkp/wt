@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+		body, html {
+    height: 200%;
+    margin:0%;
+    font-family: Open Sans;
+}
+		.w{display:none; }
+		.container{
+			height: 100px;
+			background-position:center;
+			background-repeat: no-repeat;
+			background-size:cover;
+			position: relative;
+
+		}
+		#txt{
+			color: white;
+			font-size: 30px;
+			position: absolute;
+			text-align: right;
+			top: 10%;
+			padding-top: 10%; 
+			width:95%;
+			}
+		#nav
+		{
+			color:white;
+			font-size: 40px;
+			position: absolute;
+			text-align: right;
+			top: 10%;
+			padding-top: 25%;
+			width: 95%;
+		}
+		#about{
+			position: absolute;
+			text-align: center;
+			padding-left: 5%;
+			top:15%;
+			padding-top:27%;
+		}
+		#experience{
+			position: absolute;
+			text-align: center;
+			padding-left: 5%;
+			padding-top:50%;
+		}
+		#certifications{
+			position: absolute;
+			text-align: center;
+			padding-left: 5%;
+			padding-top:75%;
+		}
+
+	</style>
+	
+</head>
+<body>
+	<div class="container">
+		<img class="w" src="http://www.yourchoiceadvisors.com/wp-content/uploads/2017/01/Slider-background.jpg"  width="100%">
+		<img class="w" src="http://www.shopphp.net/assets/plugins/parallax-slider/img/SM-slider-background.jpg" width="100%">
+		<div id="txt">
+			<h1>NAME</h1>
+			<p>Skilled at?</p>
+		</div>
+		<div id="nav">
+			<nav>
+			<a href="#about">ABOUT<t></a>
+			<a href="#experience">EXPERIENCE<t></a>
+			<a href="#certifications">CERTIFICATIONS<t></a>
+			</nav>
+		</div>
+	</div>
+	
+	<script>
+		var index=0;
+		show();
+		function show()
+		{
+			var i;
+			var x=document.getElementsByClassName("w");
+			for(i=0;i < x.length;i++)
+			{
+				x[i].style.display="none";
+			}
+			index++;
+			if(index > x.length)
+				index=1;
+			x[index-1].style.display="block";
+			setTimeout(show,3000);
+
+		}
+	</script>
+	<div id ="about">
+		<h1 align="left">ABOUT</h1>
+		<p> Information about the applicant, his schooling ,education etc etc ..........<br></p>
+	</div>
+	<div id="experience">
+		<h1 align="left">EXPERIENCE</h1>
+		<p>Infromation regarding applicant experience in projects or hackathons or working experience</p>
+	</div>
+	<div id="certifications">
+		<h1 align="left">CERTIFICATIONS</h1>
+		<p>Infromation regarding applicant certificates in projects or hackathons or work shops</p>
+	</div>
+
+	
+
+</body>
+</html>
